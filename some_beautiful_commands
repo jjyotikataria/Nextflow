@@ -1,0 +1,20 @@
+*************************************************************************************************************************************************************
+cmd_to_run = "perl -I /MG/SHARED/ANALYSIS/RESEARCH_PROJECTS/mango/bioinformatics/lib/ /home/bioinfo.super/public_html/combineFastq2_10x.pl $params.project_id $params.scratch_dir/$params.project_id/fastq $params.sample_ids $params.sample_name"
+
+println cmd_to_run
+
+myCmd1 = """
+        perl -I /MG/SHARED/ANALYSIS/RESEARCH_PROJECTS/mango/bioinformatics/lib/ /home/bioinfo.super/public_html/combineFastq2_10x.pl $params.project_id $params.scratch_dir/$params.project_id/fastq $params.sample_ids $params.sample_name
+        """
+result = myCmd1.execute().text
+
+*************************************************************************************************************************************************************
+
+
+*************************************************************************************************************************************************************
+
+
+*************************************************************************************************************************************************************
+
+
+*************************************************************************************************************************************************************
