@@ -1,0 +1,31 @@
+####################################################################################################
+                                                  ERRORS
+####################################################################################################
+
+Channel `COUNT` has been used twice as an input by process `Report` and process `GEX_LOCAL`
+
+
+
+Solution:
+
+Channel.fromPath(params.input)
+.splitCsv(sep: '\t', header: false)
+.filter{row->tuple(row =~ /GEX/) }
+.set{COUNT}
+
+Channel.fromPath(params.input)
+.splitCsv(sep: '\t', header: false)
+.filter{row->tuple(row =~ /GEX/) }
+.set{COUNT1}
+
+Make the same data do into another channel
+####################################################################################################
+
+
+
+
+####################################################################################################
+
+
+
+####################################################################################################
